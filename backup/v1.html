@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* font */
+        body { font-family: 'Courier New', Courier, monospace; }
+
+        /* responsive view*/
+        body { width: 65vw; margin: auto; }
+        @media screen and (max-width: 1000px) { body { width: 95vw; } }
+
+        /* webpage title*/
+        .heading { font-weight: bold; font-size: 3.5rem; }
+
+        /* list and item tag */
+        ol { list-style: none; }
+        ul { list-style: none; }
+        li { 
+            /* spacing */
+            margin: 1.5rem;
+
+            /* flex */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* each unit */
+        .unit { padding-bottom: 2rem; padding-top: 2rem; }
+        .subheading { font-weight: bold; font-size: 2.5rem; }
+        .line { background-color: gray; border-style: solid; }
+
+        .token {
+            padding: 0.5rem;
+            font-size: 1rem;
+
+            background-color: whitesmoke;
+        }
+
+        .text {
+            margin: 0.5rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .warning {
+            margin: 0.5rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+    <title>📘 Repo Rule</title>
+</head>
+<body>
+    <h1 class="heading">Repository 구성에 대한 규칙서</h1>
+
+    <div class="unit">
+        <h2 class="subheading">Repository 명명 규칙</h2>
+        <hr class="line" />
+    
+        <ul>
+            <li>
+                <span class="token">proj</span>
+                <span class="text">현재 서비스 중인 프로젝트의 Repository</span>
+            </li>
+            <li>
+                <span class="token">toy</span>
+                <span class="text">프로젝트의 Repository</span>
+            </li>
+            <li>
+                <span class="token">docs</span>
+                <span class="text">규칙이나 설명서 혹은 실질적으로 작성하는 코드 없이 문서가 주를 이루는 Repository</span>
+            </li>
+            <li>
+                <span class="token">depr</span>
+                <span class="text">Deprecated된 모든 종류의 Repository</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="unit">
+        <h2 class="subheading">Repository의 기술 스택 선정 규칙</h2>
+        <hr class="line" />
+
+        <ul>
+            <li>
+                <div>
+                    <span class="token">c/c++</span>
+                    <span class="token">makefile</span>
+                </div>
+                <span class="text">low level, CLI, 혹은 고성능 서버</span>
+            </li>
+            <li>
+                <div>
+                    <span class="token">markdown</span>
+                    <span class="token">markmold (proj-markmold)</span>
+                </div>
+                <span class="text">문서</span>
+            </li>
+            <li>
+                <div>
+                    <span class="token">markdown</span>
+                    <span class="token">toml</span>
+                    <span class="token">iced (proj-iced)</span>
+                </div>
+                <span class="text">정적 사이트 (혹은 deploy와 rerendering의 필요 주기가 일치하는 경우)</span>
+            </li>
+            <li>
+                <span class="token">scss</span>
+                <span class="text">CSS 프레임워크</span>
+            </li>
+            <li>
+                <div>
+                    <span class="token">next.ts</span>
+                    <span class="token">vite + typescript</span>
+                </div>
+                <span class="text">web-app (혹은 복잡한 web frontend를 필요로하는 경우)</span>
+            </li>
+
+            <li>
+                <div>
+                    <span class="token">clojure</span>
+                    <span class="token">(ring)</span>
+                </div>
+                <span class="text">상용 프로젝트 (REST 서버의 경우에는 ring 프레임워크 사용)</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="unit">
+        <h2 class="subheading">블로그 작성 규칙</h2>
+        <hr class="line" />
+
+        <ol>
+            <li>
+                <span class="text"><span class="token">githubname/postname</span> 형태로 branching</span>
+            </li>
+            <li>
+                <span class="text">이때, branch이름은 영어 소문자와 <span class="token">/</span>으로만 작성하고, 스페이스는 <span class="token">-</span>으로 대체</span>
+            </li>
+            <li>
+                <span class="text">common markdown을 준수하여 글 작성</span>
+            </li>
+            <li>
+                <span class="text">branch를 push</span>
+            </li>
+        </ol>
+    </div>
+
+
+    <div class="unit">
+        <h2 class="subheading">Python 관련 규칙</h2>
+        <hr class="line" />
+    
+        <p class="warning">
+            Python 절대 금지
+        </p>
+    </div>
+</body>
+</html>
